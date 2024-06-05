@@ -1,0 +1,50 @@
+﻿@page
+@model SphinxTask.Pages.Client.IndexModel
+@{
+    var msg = TempData["Count"];
+}
+<a class="btn btn-dark text-white mb-3 mt-2" asp-page="Create">Create Client</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                Class
+            </th>
+            <th>
+                State
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Clients)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Code</td>
+                <td>@item.Class</td>
+                <td>@item.State</td>
+                <td>
+                    <a class="btn btn-warning text-white" asp-page="Update" asp-route-id="@item.Id">Edit</a>  |
+                    <a class="btn btn-primary text-white" asp-page="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="btn btn-danger text-white" asp-page="Delete" asp-route-id="@item.Id">Delete</a> |
+                    <a class="btn btn-success text-white"asp-page="/ClientProduct/Create" asp-route-clientId="@item.Id">Add Product</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (TempData["Count"] != null)
+{
+    <div class="d-flex align-items-center justify-content-center">
+        <p class="alert alert-danger">@TempData["Count"]</p>
+    </div>
+}
+

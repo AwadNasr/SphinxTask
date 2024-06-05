@@ -1,0 +1,35 @@
+﻿@page
+@model SphinxTask.Pages.Product.UpdateModel
+@{
+}
+<h2>Update Product</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Product.Id" />
+
+    <div class="form-group">
+        <label asp-for="Product.Name" class="control-label"></label>
+        <input asp-for="Product.Name" class="form-control" />
+        <span asp-validation-for="Product.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Description" class="control-label"></label>
+        <input asp-for="Product.Description"  class="form-control"/>
+        <span asp-validation-for="Product.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.IsActive" class="control-label"></label>
+        <select asp-for="Product.IsActive" class="form-control">
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <span asp-validation-for="Product.IsActive" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-warning my-2" /> |
+        <a class="btn btn-info my-2" asp-page="Index">Back to List</a>
+    </div>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,36 @@
+﻿@page
+@model SphinxTask.Pages.ClientProduct.UpdateModel
+@{
+}
+<h1>Edit Client Product</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="ClientProduct.ProductId" class="control-label">Product</label>
+        <select asp-for="ClientProduct.ProductId" class="form-control" asp-items="Model.ActiveProducts"></select>
+        <span asp-validation-for="ClientProduct.ProductId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClientProduct.StartDate" class="control-label">Start Date</label>
+        <input asp-for="ClientProduct.StartDate" class="form-control" />
+        <span asp-validation-for="ClientProduct.StartDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClientProduct.EndDate" class="control-label">End Date</label>
+        <input asp-for="ClientProduct.EndDate" class="form-control" />
+        <span asp-validation-for="ClientProduct.EndDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClientProduct.License" class="control-label">License</label>
+        <input asp-for="ClientProduct.License" class="form-control" />
+        <span asp-validation-for="ClientProduct.License" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="ClientProduct.ClientId" />
+    <input type="hidden" asp-for="ClientProduct.Id" />
+    <button type="submit" class="btn btn-success my-2">Save</button> | 
+    <a class="btn btn-info my-2" asp-page="/Client/Index">Back to List</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

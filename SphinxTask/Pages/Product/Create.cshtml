@@ -1,0 +1,36 @@
+﻿@page
+@model SphinxTask.Pages.Product.CreateModel
+@{
+}
+<h2>Create Product</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Product.Name" class="control-label"></label>
+        <input asp-for="Product.Name" class="form-control" />
+        <span asp-validation-for="Product.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Description" class="control-label"></label>
+        <input asp-for="Product.Description" class="form-control" />
+        <span asp-validation-for="Product.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.IsActive" class="control-label"></label>
+        <select asp-for="Product.IsActive" class="form-control">
+            <option value="">Select Activation</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <span asp-validation-for="Product.IsActive" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Create</button> | 
+        <a class="btn btn-info my-2" asp-page="./Index">Back to List</a>
+    </div>
+    @*  <div asp-validation-summary="All" class="text-danger"></div> *@
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

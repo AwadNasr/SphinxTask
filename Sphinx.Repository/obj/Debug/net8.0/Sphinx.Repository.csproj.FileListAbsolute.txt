@@ -1,0 +1,15 @@
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\bin\Debug\net8.0\Sphinx.Repository.deps.json
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\bin\Debug\net8.0\Sphinx.Repository.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\bin\Debug\net8.0\Sphinx.Repository.pdb
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\bin\Debug\net8.0\Sphinx.Core.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\bin\Debug\net8.0\Sphinx.Core.pdb
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.csproj.AssemblyReference.cache
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.AssemblyInfoInputs.cache
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.AssemblyInfo.cs
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.csproj.CoreCompileInputs.cache
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.R.ACE07322.Up2Date
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\refint\Sphinx.Repository.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.pdb
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\ref\Sphinx.Repository.dll

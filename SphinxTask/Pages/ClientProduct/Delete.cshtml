@@ -1,0 +1,45 @@
+﻿@page
+@model SphinxTask.Pages.ClientProduct.DeleteModel
+@{
+}
+<h2>Delete ClientProducts</h2>
+
+<h3>Are you sure you want to delete this ClientProducts?</h3>
+<div>
+    <h4>ClientProducts</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClientProducts.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClientProducts.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClientProducts.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.ClientProducts.EndDate.HasValue)
+            {
+                @Model.ClientProducts.EndDate.Value.ToString("MM/dd/yyyy")
+            }
+            else
+            {
+                <span>Not Found</span>
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClientProducts.License)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClientProducts.License)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ClientProducts.Id" />
+        <input type="hidden" asp-for="ClientProducts.ClientId" />
+        <input type="submit" value="Delete" class="btn btn-danger"  /> |
+        <a class="btn btn-info my-2" asp-page="/Client/Index">Back to List</a>
+    </form>
+</div>

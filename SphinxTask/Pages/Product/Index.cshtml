@@ -1,0 +1,54 @@
+﻿@page
+@model SphinxTask.Pages.Product.IndexModel
+@{
+}
+<a class="btn btn-dark text-white my-3" asp-page="Create">Create Product</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                IsActive
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.IsActive</td>
+                <td>
+                    <a class="btn btn-warning text-white" asp-page="Update" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-primary text-white" asp-page="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="btn btn-danger text-white" asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<nav aria-label="Page navigation" style="display: flex; align-items: center; justify-content: center;">
+    <ul class="pagination">
+        <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+            <a class="page-link" asp-page="Index" asp-route-pageNumber="@(Model.CurrentPage - 1)">Previous</a>
+        </li>
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a class="page-link" asp-page="Index" asp-route-pageNumber="@i">@i</a>
+            </li>
+        }
+        <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
+            <a class="page-link" asp-page="Index" asp-route-pageNumber="@(Model.CurrentPage + 1)">Next</a>
+        </li>
+    </ul>
+</nav>
+

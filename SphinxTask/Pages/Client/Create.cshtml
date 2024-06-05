@@ -1,0 +1,57 @@
+﻿@page
+@model SphinxTask.Pages.Client.CreateModel
+@{
+    var msg = ViewData["msg"];
+}
+<h2>Create Client</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Client.Name" class="control-label"></label>
+        <input asp-for="Client.Name" class="form-control" />
+        <span asp-validation-for="Client.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Code" class="control-label"></label>
+        <input asp-for="Client.Code" class="form-control"  type="number" />
+        <span asp-validation-for="Client.Code" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Class" class="control-label"></label>
+        <select asp-for="Client.Class" class="form-control">
+            <option value="" >Select Class</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <span asp-validation-for="Client.Class" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.State" class="control-label"></label>
+        <select asp-for="Client.State" class="form-control">
+            <option value="" >Select State</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+            <option value="Pending">Pending</option>
+        </select>
+        <span asp-validation-for="Client.State" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success my-3">Create</button> |
+        <a class="btn btn-info my-3" asp-page="./Index">Back to List</a>
+    </div>
+   @*  <div asp-validation-summary="All" class="text-danger"></div> *@
+</form>
+@if (msg == "Code is Found before")
+{
+    <div class="d-flex align-items-center justify-content-center">
+        <p class="alert alert-danger">@msg</p>
+    </div>
+}
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

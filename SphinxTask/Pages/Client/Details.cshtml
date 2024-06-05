@@ -1,0 +1,73 @@
+﻿@page 
+@model SphinxTask.Pages.Client.DetailsModel
+@{
+}
+
+
+<h1>Client Details</h1>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Name
+        </dd>
+        <dt class="col-sm-2">
+            Code
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Code
+        </dd>
+        <dt class="col-sm-2">
+            Class
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Class
+        </dd>
+        <dt class="col-sm-2">
+            State
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.State
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Client Products</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>License</th>
+                <th></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ClientProducts)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.StartDate.ToShortDateString()</td>
+                    <td>@(item.EndDate?.ToShortDateString() ?? "Null")</td>
+                    <td>@item.License</td>
+                    <td>
+                        <a class="btn btn-danger " asp-page="/ClientProduct/Delete" asp-route-id="@item.Id">Delete</a> |
+                        <a class="btn btn-warning " asp-page="/ClientProduct/Update" asp-route-id="@item.Id">Update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<p>
+    <a class="btn btn-info" asp-page="Index">Back to List</a>
+</p>

@@ -1,0 +1,11 @@
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\bin\Debug\net8.0\Sphinx.Core.deps.json
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\bin\Debug\net8.0\Sphinx.Core.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\bin\Debug\net8.0\Sphinx.Core.pdb
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.AssemblyInfoInputs.cache
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.AssemblyInfo.cs
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.csproj.CoreCompileInputs.cache
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\refint\Sphinx.Core.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.pdb
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\ref\Sphinx.Core.dll
