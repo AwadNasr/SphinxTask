@@ -13,3 +13,4 @@ C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\refint\Sphinx.Repository.dll
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.pdb
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\ref\Sphinx.Repository.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Repository\obj\Debug\net8.0\Sphinx.Repository.sourcelink.json

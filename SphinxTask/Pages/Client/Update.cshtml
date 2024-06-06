@@ -6,6 +6,7 @@
 
 <form method="post">
     <input type="hidden" asp-for="Client.Id" />
+    
 
     <div class="form-group">
         <label asp-for="Client.Name" class="control-label"></label>
@@ -13,9 +14,9 @@
         <span asp-validation-for="Client.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Client.Code" class="control-label"></label>
-        <input asp-for="Client.Code" readonly class="form-control" type="number" />
-        <span asp-validation-for="Client.Code" class="text-danger"></span>
+        <label asp-for="Client.Code" class="d-inline" ></label>     
+        <p class=" text-success h5 d-inline">@Model.Client.Code</p>
+        <input asp-for="Client.Code" hidden class="form-control" />   
     </div>
     <div class="form-group">
         <label asp-for="Client.Class" class="control-label"></label>

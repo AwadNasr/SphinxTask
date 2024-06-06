@@ -9,3 +9,4 @@ C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\refint\Sphinx.Core.dll
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.pdb
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\ref\Sphinx.Core.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\Sphinx.Core\obj\Debug\net8.0\Sphinx.Core.sourcelink.json

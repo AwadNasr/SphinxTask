@@ -51,10 +51,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.ClientProducts)
+            @foreach (var item in Model.Client.ClientProducts)
             {
                 <tr>
-                    <td>@item.Product.Name</td>
+                    <td>@item.ProductName</td>
                     <td>@item.StartDate.ToShortDateString()</td>
                     <td>@(item.EndDate?.ToShortDateString() ?? "Null")</td>
                     <td>@item.License</td>

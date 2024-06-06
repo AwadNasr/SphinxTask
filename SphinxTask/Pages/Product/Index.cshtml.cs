@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Sphinx.Core;
+using Sphinx.Core.Entities;
+using SphinxTask.ViewModels;
 
 namespace SphinxTask.Pages.Product
 {
@@ -15,14 +17,21 @@ namespace SphinxTask.Pages.Product
             this.unitOfWork = unitOfWork;
         }
 
-        public IReadOnlyList<Sphinx.Core.Entities.Product> Products { get; set; }
+        public List<CreateProductVM> Products { get; set; }
         public int TotalPages { get; set; }
         public int CurrentPage { get; set; }
         public async Task<IActionResult> OnGetAsync(int? pageNumber)
         {
             CurrentPage = pageNumber ?? 1;
-            int pageSize = 5;
-            Products = await unitOfWork.ProductRepository.GetAllProductsWithSorting(CurrentPage, pageSize);
+            int pageSize = 3;
+            var products = await unitOfWork.ProductRepository.GetAllProductsWithSorting(CurrentPage, pageSize);
+            Products = products.Select(prod => new CreateProductVM
+            {
+                Id = prod.Id,
+                Name = prod.Name,
+                Description = prod.Description,
+                IsActive = prod.IsActive,
+            }).ToList();
             var totalItems = await unitOfWork.ProductRepository.GetAllAsync();
             var totalProducts = totalItems.Count();
             TotalPages = (int)Math.Ceiling(totalProducts / (double)pageSize);

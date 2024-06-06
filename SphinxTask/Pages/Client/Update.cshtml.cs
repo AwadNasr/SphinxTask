@@ -55,7 +55,7 @@ namespace SphinxTask.Pages.Client
             }
 
             clientEntity.Name = Client.Name;
-            clientEntity.Code = Client.Code;
+            //clientEntity.Code = Client.Code;
             clientEntity.Class = Client.Class;
             clientEntity.State = Client.State;
 

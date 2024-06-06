@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sphinx.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eec73fe7b004ce06996cb21c2bae60de5cf86888")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sphinx.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sphinx.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

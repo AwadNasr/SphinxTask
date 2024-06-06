@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Sphinx.Core;
 using Sphinx.Core.Entities;
+using Sphinx.Repository;
+using SphinxTask.ViewModels;
 namespace SphinxTask.Pages.Client
 {
     public class DetailsModel : PageModel
@@ -13,23 +15,41 @@ namespace SphinxTask.Pages.Client
         {
             this.unitOfWork = unitOfWork;
         }
-        public Sphinx.Core.Entities.Client Client { get; set; }
-        public IReadOnlyList<Sphinx.Core.Entities.ClientProducts> ClientProducts { get; set; }
+        public ClientDetailsVM Client { get; set; }
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            if(id == null)
+            if (id == 0)
             {
                 return NotFound();
             }
 
-            Client = await unitOfWork.ClientRepository.GetByIdAsync(id);
+            var client = await unitOfWork.ClientRepository.GetByIdAsync(id);
 
-            if (Client == null) { 
+            if (client == null)
+            {
                 return NotFound();
             }
-            ClientProducts = await unitOfWork.ClientProductsRepository.GetClientWithProducts(Client.Id);
-            return Page();
 
+            var clientProducts = await unitOfWork.ClientProductsRepository.GetClientWithProducts(client.Id);
+
+            Client = new ClientDetailsVM
+            {
+                Id = client.Id,
+                Name = client.Name,
+                Code = client.Code,
+                Class = client.Class,
+                State = client.State,
+                ClientProducts = clientProducts.Select(cp => new ClientProductVM
+                {
+                    Id = cp.Id,
+                    ProductName = cp.Product.Name,
+                    StartDate = cp.StartDate,
+                    EndDate = cp.EndDate,
+                    License = cp.License
+                }).OrderBy(cp => cp.ProductName).ToList()
+            };
+
+            return Page();
         }
     }
 }

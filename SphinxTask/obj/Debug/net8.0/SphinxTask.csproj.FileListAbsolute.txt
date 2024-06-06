@@ -254,3 +254,4 @@ C:\Users\On TraCk\Desktop\SphinxTaskSolution\SphinxTask\bin\Debug\net8.0\runtime
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\SphinxTask\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\SphinxTask\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\On TraCk\Desktop\SphinxTaskSolution\SphinxTask\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\On TraCk\Desktop\SphinxTaskSolution\SphinxTask\obj\Debug\net8.0\SphinxTask.sourcelink.json

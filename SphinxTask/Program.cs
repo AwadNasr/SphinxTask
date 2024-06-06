@@ -7,7 +7,7 @@ namespace SphinxTask
 {
     public class Program
     {
-        public async static Task Main(string[] args)
+        public async  static Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -42,7 +42,17 @@ namespace SphinxTask
 
             app.UseRouting();
 
+
             app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapGet("/", context =>
+                {
+                    context.Response.Redirect("/Client/Index");
+                    return Task.CompletedTask;
+                });
+            });
 
             app.MapRazorPages();
 

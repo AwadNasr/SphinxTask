@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Sphinx.Core;
+using Sphinx.Core.Entities;
+using SphinxTask.ViewModels;
 
 namespace SphinxTask.Pages.Product
 {
@@ -12,23 +14,26 @@ namespace SphinxTask.Pages.Product
         {
             this.unitOfWork = unitOfWork;
         }
-        public Sphinx.Core.Entities.Product Product { get; set; }
+        public CreateProductVM Product { get; set; }
         public async Task<IActionResult> OnGetAsync(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            Product = await unitOfWork.ProductRepository.GetByIdAsync(id);
-
-            if (Product == null)
+            var product = await unitOfWork.ProductRepository.GetByIdAsync(id);
+            if (product == null)
             {
                 return NotFound();
             }
-
+            Product = new CreateProductVM
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                IsActive = product.IsActive
+            };
             return Page();
-
         }
 
     }

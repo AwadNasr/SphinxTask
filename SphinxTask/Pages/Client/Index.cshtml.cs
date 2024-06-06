@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Sphinx.Core.Entities;
 using Sphinx.Core;
+using SphinxTask.ViewModels;
 
 namespace SphinxTask.Pages.Client
 {
@@ -14,10 +15,18 @@ namespace SphinxTask.Pages.Client
             this.unitOfWork = unitOfWork;
         }
 
-        public IReadOnlyList<Sphinx.Core.Entities.Client> Clients { get; set; }
+        public List<CreateClientVM> Clients { get; set; }
         public async Task OnGetAsync()
         {
-            Clients= await unitOfWork.ClientRepository.GetAllClientsWithSorting();
+            var clients = await unitOfWork.ClientRepository.GetAllClientsWithSorting();
+            Clients = clients.Select(client => new CreateClientVM
+            {
+                Id = client.Id,
+                Name = client.Name,
+                Code = client.Code,
+                Class = client.Class,
+                State = client.State
+            }).ToList();
         }
     }
 }
